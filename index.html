@@ -2,22 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap | Stats Preview Card Component</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Stats preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background-color: #000;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 1000px;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .left-section {
+      background-color: #1d1838;
+      color: white;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left-section h1 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .left-section h1 span {
+      color: #6a0dad;
+    }
+
+    .left-section p {
+      margin-bottom: 30px;
+      font-size: 0.8rem;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .stats h3 {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+
+    .stats p {
+      font-size: 0.8rem;
+      margin: 0;
+    }
+
+    .image-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #6a0dad;
+      opacity: 0.5;
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="./bootstrap.html">Bootstrap</a>
-    <a href="./tailwind.html">Tailwind</a>
-  </nav>
+  <div class="card shadow-lg d-flex flex-md-row flex-column">
+    <div class="col-md-6 left-section">
+      <h1>Get <span>insights</span> that help your business grow</h1>
+      <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+      <div class="stats">
+        <div>
+          <h3>10k+</h3>
+          <p>COMPANIES</p>
+        </div>
+        <div>
+          <h3>314</h3>
+          <p>TEMPLATES</p>
+        </div>
+        <div>
+          <h3>12m+</h3>
+          <p>QUERIES</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 image-section">
+      <img src="images/image-header-desktop.jpg" alt="Data analytics preview">
+      <div class="image-overlay"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
